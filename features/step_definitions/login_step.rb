@@ -1,5 +1,5 @@
 Given('I am on the login page') do
-  visit 'https://www.saucedemo.com/'
+  visit get_data_test("BASE_URL")
 end
 
 When('I enter my username and password') do
