@@ -6,6 +6,10 @@ end
 
 After do |scenario|
   puts "INI HOOKS AFTER"
+
+  if scenario.failed?
+    take_screenshot
+  end
 end
 
 Before('@case-3') do
@@ -22,4 +26,5 @@ end
 
 at_exit do
   puts "GENERATE REPORT"
+  generate_report
 end
