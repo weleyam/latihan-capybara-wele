@@ -7,8 +7,10 @@ on:
 
 jobs:
   automation-test:
-    name: Automation test Ruby Capybara (wele)
-    runs-on: ubuntu-latest
+    name: Automation test Ruby Capybara (wele-pc)
+    runs-on:
+      - self-hosted
+      - wele-pc
     
     steps:
       - uses: actions/checkout@v3
